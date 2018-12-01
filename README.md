@@ -108,7 +108,7 @@
 
 コマンドラインから
 
-    $ python soinsu.py
+    prime$ python soinsu.py
 
 を実行すると、./factorization/ディレクトリ以下に、i.json（i=0,1,…,9）を生成します（はじめに説明したものと同じ10個のjsonファイルです）。
 
