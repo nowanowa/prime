@@ -1,6 +1,6 @@
 # prime
 
-1,000,000までの素因数分解を収録したjsonデータと、それを出力するためのpythonコードがあります。
+1,000,000までの素因数分解を収録したjsonデータと、それを出力するためのpythonコードです。
 
 
 ## prime/factorization/*.json
@@ -68,7 +68,7 @@
 
 素因数分解を収録したjsonファイルを生成するための関数たちです。
 
-    $ python
+    prime$ python
     >>> import soinsu
 
 - **soinsu.bunkai(sup, numbers=None)**
@@ -77,7 +77,8 @@
 
     >>> numbers = soinsu.bunkai(1000)
     >>> numbers[768]
-    [{"p": 2, "e": 8}, {"p": 3, "e": 1}]
+    [{'p': 2, 'e': 8}, {'p': 3, 'e': 1}]
+    >>> numbers = soinsu.bunkai(2000, numbers) #結果の再利用
 
 - **soinsu.letterall(numbers)**
 - **soinsu.letter(n)**
@@ -96,14 +97,14 @@
 `numbers`に収録された素因数分解のうち、`inf`以上`sup`未満の整数に対応するものを取り出します。
 
     >>> soinsu.slice(numbers, 7, 10)
-    {"7": [{"p": 7, "e": 1}], "8": [{"p": 2, "e": 3}], "9": [{"p": 3, "e": 2}]}
+    {7: [{'p': 7, 'e': 1}], 8: [{'p': 2, 'e': 3}], 9: [{'p': 3, 'e': 2}]}
 
 - **soinsu.dump(numbers, path='./factorization-dump.json')**
 
 `path`で指定されたファイルへ、json形式に変換した`numbers`を出力します。
 
 
-### 自動生成
+### jsonファイルの自動生成
 
 コマンドラインから
 
